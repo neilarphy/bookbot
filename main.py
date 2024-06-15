@@ -9,7 +9,7 @@ def main():
     list_of_dicts.sort(reverse=True, key=sort_on)
     
     #Creating a report
-    print(f'--- Begin report of {PATH_TO_FILE}')
+    print(f'--- Begin report of {PATH_TO_FILE} ---')
     print(f'{word_count} words in the document\n')
     for char_dict in list_of_dicts:
         print(f"The '{char_dict['name']}' character was found {char_dict['num']} times")
@@ -18,7 +18,6 @@ def main():
 def get_book_text(path):
     with open(path) as f:
         return f.read()
-
 
 def get_word_count(text):
     return len(text.split())
